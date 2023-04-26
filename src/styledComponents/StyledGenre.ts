@@ -7,6 +7,12 @@ export const GenreDiv = styled.div`
     overflow-x: scroll;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    padding: 10px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        overflow-x: hidden;
+    }
     h4{
         background-color: ${colors.button2};
         padding: 5px 10px;

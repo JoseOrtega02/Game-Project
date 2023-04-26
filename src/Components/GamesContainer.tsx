@@ -1,12 +1,16 @@
 import React from 'react'
 import GameCard from './GameCard'
+import { CardContainer } from '../styledComponents/CardContainer'
 
 function GamesContainer() {
   return (
-    <div>
-      <h1>GamesContainer</h1>
+    <CardContainer>
       <GameCard/>
-    </div>
+      <GameCard/>
+      <GameCard/>
+      <GameCard/>
+      <GameCard/>
+    </CardContainer>
   )
 }
 
