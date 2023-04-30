@@ -9,9 +9,8 @@ function useFetch(props:{url:string}) {
         fetch(props.url)
   .then(response => response.json())
   .then(data=> setData(data))
-  .then((json) => setError("Error"))
   .catch((error) => setError(error))
-  .finally(() => setLoading(true))
+  .finally(() => setLoading(false))
 
 
     },[])
