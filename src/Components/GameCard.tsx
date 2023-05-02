@@ -1,12 +1,20 @@
 import React from 'react'
 import { StyledGameCard } from '../styledComponents/StyledGameCard'
-function GameCard() {
+
+interface Props{
+  id:number,
+  name: string,
+  background_image: string,
+  rating: number
+}
+
+function GameCard({id,name,background_image,rating}:Props) {
   return (
     <StyledGameCard>
       <a href="#">
-        <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg" alt="" />
-        <h3>Grand Theft Auto V</h3>
-        <h4>4.5</h4>
+        <img src={background_image} alt="" />
+        <h3>{name}</h3>
+        <h4>{rating}</h4>
       </a>
       
     </StyledGameCard>
