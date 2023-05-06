@@ -57,14 +57,22 @@ function useFetch(props:{url:string}) {
     useEffect(() => {
         fetch(props.url)
   .then(response => response.json())
-  .then(data=> setData(data))
+  .then(data=> {if(data != null){setData(data)}})
   .catch((error) => setError(error))
   .finally(() => setLoading(false))
 
 
     },[])
 
-  return {data,error,loading}
+    function Refetch(url:string){
+      fetch(url)
+  .then(response => response.json())
+  .then(data=> {if(data != null){setData(data)}})
+  .catch((error) => setError(error))
+  .finally(() => setLoading(false))
+    }
+
+  return {data,error,loading,Refetch}
 
 }
 
