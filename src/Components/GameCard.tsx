@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledGameCard } from '../styledComponents/StyledGameCard'
+import { Link } from 'react-router-dom'
 
 interface Props{
   id:number,
@@ -11,11 +12,11 @@ interface Props{
 function GameCard({id,name,background_image,rating}:Props) {
   return (
     <StyledGameCard>
-      <a href="#">
+      <Link to={`/games/`+id}>
         <img src={background_image} alt="" />
         <h3>{name}</h3>
         <h4>{rating}</h4>
-      </a>
+      </Link>
       
     </StyledGameCard>
   )

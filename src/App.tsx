@@ -11,7 +11,7 @@ import Platforms from './Pages/Platforms'
 import Publishers from './Pages/Publishers'
 import Stores from './Pages/Stores'
 import Developers from './Pages/Developers'
-
+import Home from './Pages/Home'
 function App() {
   
 
@@ -19,10 +19,11 @@ function App() {
     <div className="App">
       <Header/>
       
-      <Genres/>
-      <GamesContainer/>
+      
       <Routes>
-        <Route  path='/:gameId' element={<GameDetail/>}/>
+        
+      <Route  path='/' element={<Home/>}/>
+        <Route  path='games/:gameId' element={<GameDetail/>}/>
         <Route  path='/genres' element={<GenresPage/>}/>
         <Route  path='/creators' element={<Creators/>}/>
         <Route  path='/platforms' element={<Platforms/>}/>
