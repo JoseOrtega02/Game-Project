@@ -64,7 +64,7 @@ function useFetch(props:{url:string}) {
 
     },[])
 
-    function Refetch(url:string){
+    function Refetch(url:any){
       fetch(url)
   .then(response => response.json())
   .then(data=> {if(data != null){setData(data)}})
