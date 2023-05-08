@@ -15,7 +15,7 @@ function GamesContainer() {
     <CardContainer>
       {error && <>{console.log(error)}</>}
       {loading && <>loading</>}
-      
+      <div id='home'></div>
       {<>{data?.results?.map(result => {return <GameCard key={result.id} name={result.name} id={result.id} background_image={result.background_image} rating={result.rating} />})}</>}
       
     
@@ -23,15 +23,16 @@ function GamesContainer() {
 
     </CardContainer>
     <PageStyled>
+      
     <button onClick={()=>{
       if(data?.previous !== null){
         Refetch(data?.previous)
       }
       
     }}>prev</button>
-    <button onClick={()=>{
+    <a href="#home"><button onClick={()=>{
       Refetch(data?.next)
-    }}>next</button>
+    }}>next</button></a>
     </PageStyled>
     </>
   )
