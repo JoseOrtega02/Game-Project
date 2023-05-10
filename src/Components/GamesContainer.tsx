@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GameCard from './GameCard'
 import { CardContainer } from '../styledComponents/CardContainer'
 import useFetch from '../Hooks/useFetch'
-import { PageStyled } from '../styledComponents/PageStyled'
+import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 
 
 
@@ -24,15 +24,15 @@ function GamesContainer() {
     </CardContainer>
     <PageStyled>
       
-    <button onClick={()=>{
+    <ButtonGeneric onClick={()=>{
       if(data?.previous !== null){
         Refetch(data?.previous)
       }
       
-    }}>prev</button>
-    <a href="#home"><button onClick={()=>{
+    }}>prev</ButtonGeneric>
+    <a href="#home"><ButtonGeneric onClick={()=>{
       Refetch(data?.next)
-    }}>next</button></a>
+    }}>next</ButtonGeneric></a>
     </PageStyled>
     </>
   )
