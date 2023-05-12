@@ -40,20 +40,20 @@ function GameDetail() {
         setOpen(!itsOpen)
         showmore()}}>{itsOpen?("Show more"):("Show less")}</ButtonGeneric>
     </div>
-    <div>
-      <h3>Released at {game.released}</h3>
-      <h3>Playtime: {game.playtime}hrs</h3>
+    <div className="text__container">
+      <h3>Released at <h3 id='colored__text'>{game.released}</h3></h3>
+      <h3>Playtime: <h3 id='colored__text'>{game.playtime}</h3>hrs</h3>
     </div>
-    <div>
+    <div className="button__container">
       <ButtonGeneric>Metacritic: {game.metacritic} +</ButtonGeneric>
       <ButtonGeneric>Reddit +</ButtonGeneric>
     </div>
     <h3>Genres:</h3>
-    <div>
+    <div className="map__container">
       {game.genres.map(genres =><h4>{genres.name}</h4> )}
     </div>
     <h3>Tags:</h3>
-    <div>
+    <div className="map__container">
       {game.tags.map(tag =><h4>{tag.name}</h4> )}
     </div>
     </GameDetails>
