@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import { game } from '../Components/gameSample'
 import { ButtonGeneric } from '../styledComponents/PageStyled'
 import { GameDetails } from '../styledComponents/GameDetail'
 import { Button } from '../styledComponents/StyledButton'
+import Screenshots from '../Components/Screenshots'
+import { fetchData } from '../Hooks/renderAsFetch'
 
 
 
 function GameDetail() {
   const [itsOpen,setOpen] = useState(false)
-
+  const screenshots = fetchData(`https://api.rawg.io/api/games/3498/screenshots?key=c54aa861de274d579731eebf68f91d4b`)
   const showmore = () => {
     const Id = document.getElementById("ps")
     console.log(Id?.children)
@@ -25,7 +27,7 @@ function GameDetail() {
     })
     }
   
-
+    
   return (
     <GameDetails>
     <ButtonGeneric>return</ButtonGeneric>
@@ -44,6 +46,10 @@ function GameDetail() {
       <h3>Released at <h3 id='colored__text'>{game.released}</h3></h3>
       <h3>Playtime: <h3 id='colored__text'>{game.playtime}</h3>hrs</h3>
     </div>
+    <Suspense fallback={<h4>Loading..</h4>}>
+        <Screenshots screenshots={screenshots} />
+        </Suspense>
+
     <div className="button__container">
       <ButtonGeneric>Metacritic: {game.metacritic} +</ButtonGeneric>
       <ButtonGeneric>Reddit +</ButtonGeneric>
