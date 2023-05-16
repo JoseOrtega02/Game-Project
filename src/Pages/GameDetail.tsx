@@ -5,12 +5,14 @@ import { GameDetails } from '../styledComponents/GameDetail'
 import { Button } from '../styledComponents/StyledButton'
 import Screenshots from '../Components/Screenshots'
 import { fetchData } from '../Hooks/renderAsFetch'
+import Trailers from '../Components/Trailers'
 
 
 
 function GameDetail() {
   const [itsOpen,setOpen] = useState(false)
   const screenshots = fetchData(`https://api.rawg.io/api/games/3498/screenshots?key=c54aa861de274d579731eebf68f91d4b`)
+  const trailers = fetchData("https://api.rawg.io/api/games/3498/movies?key=c54aa861de274d579731eebf68f91d4b")
   const showmore = () => {
     const Id = document.getElementById("ps")
     console.log(Id?.children)
@@ -48,8 +50,11 @@ function GameDetail() {
     </div>
     <Suspense fallback={<h4>Loading..</h4>}>
         <Screenshots screenshots={screenshots} />
+        
         </Suspense>
-
+        <Suspense fallback={<h4>Loading..</h4>}>
+          <Trailers trailers={trailers} />
+        </Suspense>
     <div className="button__container">
       <ButtonGeneric>Metacritic: {game.metacritic} +</ButtonGeneric>
       <ButtonGeneric>Reddit +</ButtonGeneric>
