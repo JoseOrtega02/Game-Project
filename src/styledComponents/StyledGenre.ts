@@ -17,6 +17,9 @@ export const GenreDiv = styled.div`
         background-color: ${colors.button2};
         padding: 5px 10px;
         border-radius: 5px;
+        text-align: center;
+        display: flex;
+    align-items: center;
         a{
             color: ${colors.button1};
             text-decoration: none;
