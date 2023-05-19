@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import  { Suspense, useState, useTransition } from 'react'
 import GameCard from './GameCard'
 import { CardContainer } from '../styledComponents/CardContainer'
-import useFetch from '../Hooks/useFetch'
+
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
+import { fetchData } from '../Hooks/renderAsFetch'
 
 
 
-
+const games = fetchData("https://api.rawg.io/api/games?key=c54aa861de274d579731eebf68f91d4b")
 function GamesContainer() {
 
-  const {data,error,loading,Refetch} = useFetch({url:"https://api.rawg.io/api/games?key=c54aa861de274d579731eebf68f91d4b"})
-
+ 
+  const [data,setGames] = useState(games)
+  const gamesArr = data.read()
+  const [isPending,startTransition] = useTransition()
   return (<>
-    <CardContainer>
-      {error && <>{console.log(error)}</>}
-      {loading && <>loading</>}
+    <Suspense fallback={<h4>loading...</h4>}>
+    <CardContainer style={{opacity: isPending? 0.5:1 }}>
+      <>{console.log(gamesArr)}</>
+      
       <div id='home'></div>
-      {<>{data?.results?.map(result => {return <GameCard key={result.id} name={result.name} id={result.id} background_image={result.background_image} rating={result.rating} />})}</>}
+      {<>{gamesArr?.results?.map((result:any) => {return <GameCard key={result.id} name={result.name} id={result.id} background_image={result.background_image} rating={result.rating} />})}</>}
       
     
     
@@ -24,16 +28,21 @@ function GamesContainer() {
     </CardContainer>
     <PageStyled>
       
-    <ButtonGeneric onClick={()=>{
-      if(data?.previous !== null){
-        Refetch(data?.previous)
+    <a href="#home"><ButtonGeneric onClick={()=>{
+      if(gamesArr?.previous !== null){
+        startTransition(()=>
+      setGames(fetchData(gamesArr?.previous))
+      )
       }
       
-    }}>prev</ButtonGeneric>
+    }}>prev</ButtonGeneric></a>
     <a href="#home"><ButtonGeneric onClick={()=>{
-      Refetch(data?.next)
+      startTransition(()=>
+      setGames(fetchData(gamesArr?.next))
+      )
     }}>next</ButtonGeneric></a>
     </PageStyled>
+    </Suspense>
     </>
   )
 }
