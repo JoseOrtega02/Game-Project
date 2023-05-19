@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { GenreDiv } from '../styledComponents/StyledGenre'
+import { fetchData } from '../Hooks/renderAsFetch'
 
+
+ const genres = fetchData("https://api.rawg.io/api/genres?key=c54aa861de274d579731eebf68f91d4b")
 function Genres() {
-  return (
+ 
+  const data = genres.read()
+  return (<Suspense fallback={<h4>Loading...</h4>}>
     <GenreDiv>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>
-      <h4><a href="#">Action</a></h4>  
+      
+     
+        {data?.results.map((res:any) => (
+          <h4 key={res.id}><a href="#">{res.name}</a></h4>
+        ))}
+       
     </GenreDiv>
+    </Suspense> 
   )
 }
 
