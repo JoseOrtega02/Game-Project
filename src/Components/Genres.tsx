@@ -13,7 +13,7 @@ function Genres() {
       
      
         {data?.results.map((res:any) => (
-         <Link to={`genre/${res.id}`} state={res} style={{textDecoration:"none"}}><h4 key={res.id}><a href="#">{res.name}</a></h4></Link>
+         <Link to={`genre/${res.id}`} state={res} style={{textDecoration:"none"}}><h4 key={res.id}>{res.name}</h4></Link>
         ))}
        
     </GenreDiv>
