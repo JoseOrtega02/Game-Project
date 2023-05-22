@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { colors } from "./Colors";
+import { Link } from "react-router-dom";
 export const GenreDiv = styled.div`
+    
+    
     display: flex;
     gap: 20px;
     width: 90vw;
