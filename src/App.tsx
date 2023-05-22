@@ -24,7 +24,7 @@ function App() {
         
       <Route  path='/' element={<Home/>}/>
         <Route  path='games/:gameId' element={<GameDetail/>}/>
-        <Route  path='/genres' element={<GenresPage/>}/>
+        <Route  path='genre/:genreId' element={<GenresPage/>}/>
         <Route  path='/creators' element={<Creators/>}/>
         <Route  path='/platforms' element={<Platforms/>}/>
         <Route  path='/publishers' element={<Publishers/>}/>

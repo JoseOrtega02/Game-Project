@@ -12,7 +12,7 @@ const getSusupender = (promise:Promise<any>) =>{
         }
         )
     
-    const read = () =>{
+    const read:any = () =>{
         switch (status) {
             case "pending":
                 throw suspender
