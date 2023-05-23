@@ -5,6 +5,7 @@ import GameCard from '../Components/GameCard'
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 import { CardContainer } from '../styledComponents/CardContainer'
 import useFetch from '../Hooks/useFetch'
+import { Game } from '../Components/gameSample'
 
   
 
@@ -23,8 +24,7 @@ function GenresPage() {
           <CardContainer>
           {error && <h4>an Error ocurred</h4>}
             {loading && <h4>Loading...</h4>}
-          {data?.results.map((result:any) =>
-            {return <GameCard key={result.id} name={result.name} id={result.id} background_image={result.background_image} rating={result.rating} />})}
+          {data?.results?.map((result:any) => (<GameCard Game={result} />))}
        </CardContainer>
         
       

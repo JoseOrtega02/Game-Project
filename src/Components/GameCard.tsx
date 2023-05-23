@@ -1,21 +1,19 @@
 import React from 'react'
 import { StyledGameCard } from '../styledComponents/StyledGameCard'
 import { Link } from 'react-router-dom'
+import { Game } from './gameSample'
 
 interface Props{
-  id:number,
-  name: string,
-  background_image: string,
-  rating: number
+  Game: Game
 }
 
-function GameCard({id,name,background_image,rating}:Props) {
+function GameCard({Game}:Props) {
   return (
     <StyledGameCard>
-      <Link to={`/games/`+id}>
-        <img src={background_image} alt="" />
-        <h3>{name}</h3>
-        <h4>{rating}</h4>
+      <Link to={`/games/`+Game.id} state={Game}>
+        <img src={Game.background_image} alt="" />
+        <h3>{Game.name}</h3>
+        <h4>{Game.rating}</h4>
       </Link>
       
     </StyledGameCard>
