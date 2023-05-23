@@ -5,103 +5,14 @@ export const game = {
     "name_original": "Grand Theft Auto V",
     "description": "<p>Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. <br />\nSimultaneous storytelling from three unique perspectives: <br />\nFollow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from. <br />\nGTA Online will provide a lot of additional challenge even for the experienced players, coming fresh from the story mode. Now you will have other players around that can help you just as likely as ruin your mission. Every GTA mechanic up to date can be experienced by players through the unique customizable character, and community content paired with the leveling system tends to keep everyone busy and engaged.</p>\n<p>Español<br />\nRockstar Games se hizo más grande desde su entrega anterior de la serie. Obtienes la construcción del mundo complicada y realista de Liberty City de GTA4 en el escenario de Los Santos, un viejo favorito de los fans, GTA San Andreas. 561 vehículos diferentes (incluidos todos los transportes que puede operar) y la cantidad aumenta con cada actualización.<br />\nNarración simultánea desde tres perspectivas únicas:<br />\nSigue a Michael, ex-criminal que vive su vida de ocio lejos del pasado, Franklin, un niño que busca un futuro mejor, y Trevor, el pasado exacto del que Michael está tratando de huir.<br />\nGTA Online proporcionará muchos desafíos adicionales incluso para los jugadores experimentados, recién llegados del modo historia. Ahora tendrás otros jugadores cerca que pueden ayudarte con la misma probabilidad que arruinar tu misión. Los jugadores pueden experimentar todas las mecánicas de GTA actualizadas a través del personaje personalizable único, y el contenido de la comunidad combinado con el sistema de nivelación tiende a mantener a todos ocupados y comprometidos.</p>",
     "metacritic": 92,
-    "metacritic_platforms": [
-      {
-        "metascore": 79,
-        "url": "https://www.metacritic.com/game/xbox-series-x/grand-theft-auto-v",
-        "platform": {
-          "platform": 186,
-          "name": "Xbox Series S/X",
-          "slug": "xbox-series-x"
-        }
-      },
-      {
-        "metascore": 97,
-        "url": "https://www.metacritic.com/game/xbox-one/grand-theft-auto-v",
-        "platform": {
-          "platform": 1,
-          "name": "Xbox One",
-          "slug": "xbox-one"
-        }
-      },
-      {
-        "metascore": 97,
-        "url": "https://www.metacritic.com/game/xbox-360/grand-theft-auto-v",
-        "platform": {
-          "platform": 14,
-          "name": "Xbox 360",
-          "slug": "xbox360"
-        }
-      },
-      {
-        "metascore": 81,
-        "url": "https://www.metacritic.com/game/playstation-5/grand-theft-auto-v",
-        "platform": {
-          "platform": 187,
-          "name": "PlayStation 5",
-          "slug": "playstation5"
-        }
-      },
-      {
-        "metascore": 97,
-        "url": "https://www.metacritic.com/game/playstation-4/grand-theft-auto-v",
-        "platform": {
-          "platform": 18,
-          "name": "PlayStation 4",
-          "slug": "playstation4"
-        }
-      },
-      {
-        "metascore": 97,
-        "url": "https://www.metacritic.com/game/playstation-3/grand-theft-auto-v",
-        "platform": {
-          "platform": 16,
-          "name": "PlayStation 3",
-          "slug": "playstation3"
-        }
-      },
-      {
-        "metascore": 96,
-        "url": "https://www.metacritic.com/game/pc/grand-theft-auto-v",
-        "platform": {
-          "platform": 4,
-          "name": "PC",
-          "slug": "pc"
-        }
-      }
-    ],
+    "metacritic_platforms": [],
     "released": "2013-09-17",
     
     "background_image": "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg",
     "website": "http://www.rockstargames.com/V/",
     "rating": 4.47,
     "rating_top": 5,
-    "ratings": [
-      {
-        "id": 5,
-        "title": "exceptional",
-        "count": 3775,
-        "percent": 58.97
-      },
-      {
-        "id": 4,
-        "title": "recommended",
-        "count": 2107,
-        "percent": 32.91
-      },
-      {
-        "id": 3,
-        "title": "meh",
-        "count": 406,
-        "percent": 6.34
-      },
-      {
-        "id": 1,
-        "title": "skip",
-        "count": 114,
-        "percent": 1.78
-      }
-    ],
+    "ratings": [],
    
    
     "playtime": 73,
@@ -113,109 +24,7 @@ export const game = {
     "metacritic_url": "https://www.metacritic.com/game/pc/grand-theft-auto-v",
     "saturated_color": "0f0f0f",
     "dominant_color": "0f0f0f",
-    "platforms": [
-      {
-        "platform": {
-          "id": 187,
-          "name": "PlayStation 5",
-          "slug": "playstation5",
-          "image": null,
-          "year_end": null,
-          "year_start": 2020,
-          "games_count": 852,
-          "image_background": "https://media.rawg.io/media/games/c92/c9207a31f0eeb9904a840fc26eae6afb.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      },
-      {
-        "platform": {
-          "id": 186,
-          "name": "Xbox Series S/X",
-          "slug": "xbox-series-x",
-          "image": null,
-          "year_end": null,
-          "year_start": 2020,
-          "games_count": 748,
-          "image_background": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      },
-      {
-        "platform": {
-          "id": 18,
-          "name": "PlayStation 4",
-          "slug": "playstation4",
-          "image": null,
-          "year_end": null,
-          "year_start": null,
-          "games_count": 6625,
-          "image_background": "https://media.rawg.io/media/games/16b/16b1b7b36e2042d1128d5a3e852b3b2f.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      },
-      {
-        "platform": {
-          "id": 4,
-          "name": "PC",
-          "slug": "pc",
-          "image": null,
-          "year_end": null,
-          "year_start": null,
-          "games_count": 512074,
-          "image_background": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {
-          "minimum": "Minimum:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1, Windows Vista 64 Bit Service Pack 2* (*NVIDIA video card recommended if running Vista OS)Processor: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHzMemory: 4 GB RAMGraphics: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)Storage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes: Over time downloadable content and programming changes will change the system requirements for this game.  Please refer to your hardware manufacturer and www.rockstargames.com/support for current compatibility information. Some system components such as mobile chipsets, integrated, and AGP graphics cards may be incompatible. Unlisted specifications may not be supported by publisher.     Other requirements:  Installation and online play requires log-in to Rockstar Games Social Club (13+) network; internet connection required for activation, online play, and periodic entitlement verification; software installations required including Rockstar Games Social Club platform, DirectX , Chromium, and Microsoft Visual C++ 2008 sp1 Redistributable Package, and authentication software that recognizes certain hardware attributes for entitlement, digital rights management, system, and other support purposes.     SINGLE USE SERIAL CODE REGISTRATION VIA INTERNET REQUIRED; REGISTRATION IS LIMITED TO ONE ROCKSTAR GAMES SOCIAL CLUB ACCOUNT (13+) PER SERIAL CODE; ONLY ONE PC LOG-IN ALLOWED PER SOCIAL CLUB ACCOUNT AT ANY TIME; SERIAL CODE(S) ARE NON-TRANSFERABLE ONCE USED; SOCIAL CLUB ACCOUNTS ARE NON-TRANSFERABLE.  Partner Requirements:  Please check the terms of service of this site before purchasing this software.",
-          "recommended": "Recommended:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1Processor: Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)Memory: 8 GB RAMGraphics: NVIDIA GTX 660 2GB / AMD HD 7870 2GBStorage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes:"
-        }
-      },
-      {
-        "platform": {
-          "id": 16,
-          "name": "PlayStation 3",
-          "slug": "playstation3",
-          "image": null,
-          "year_end": null,
-          "year_start": null,
-          "games_count": 3193,
-          "image_background": "https://media.rawg.io/media/games/e2d/e2d3f396b16dded0f841c17c9799a882.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      },
-      {
-        "platform": {
-          "id": 14,
-          "name": "Xbox 360",
-          "slug": "xbox360",
-          "image": null,
-          "year_end": null,
-          "year_start": null,
-          "games_count": 2777,
-          "image_background": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      },
-      {
-        "platform": {
-          "id": 1,
-          "name": "Xbox One",
-          "slug": "xbox-one",
-          "image": null,
-          "year_end": null,
-          "year_start": null,
-          "games_count": 5509,
-          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
-        },
-        "released_at": "2013-09-17",
-        "requirements": {}
-      }
-    ],
+    "platforms": [],
     "developers": [
       {
         "id": 3524,
@@ -419,3 +228,120 @@ export const game = {
     "clip": null,
     "description_raw": "Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. \nSimultaneous storytelling from three unique perspectives: \nFollow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from. \nGTA Online will provide a lot of additional challenge even for the experienced players, coming fresh from the story mode. Now you will have other players around that can help you just as likely as ruin your mission. Every GTA mechanic up to date can be experienced by players through the unique customizable character, and community content paired with the leveling system tends to keep everyone busy and engaged.\n\nEspañol\nRockstar Games se hizo más grande desde su entrega anterior de la serie. Obtienes la construcción del mundo complicada y realista de Liberty City de GTA4 en el escenario de Los Santos, un viejo favorito de los fans, GTA San Andreas. 561 vehículos diferentes (incluidos todos los transportes que puede operar) y la cantidad aumenta con cada actualización.\nNarración simultánea desde tres perspectivas únicas:\nSigue a Michael, ex-criminal que vive su vida de ocio lejos del pasado, Franklin, un niño que busca un futuro mejor, y Trevor, el pasado exacto del que Michael está tratando de huir.\nGTA Online proporcionará muchos desafíos adicionales incluso para los jugadores experimentados, recién llegados del modo historia. Ahora tendrás otros jugadores cerca que pueden ayudarte con la misma probabilidad que arruinar tu misión. Los jugadores pueden experimentar todas las mecánicas de GTA actualizadas a través del personaje personalizable único, y el contenido de la comunidad combinado con el sistema de nivelación tiende a mantener a todos ocupados y comprometidos."
   }
+
+
+
+
+
+// Interface typescript of game
+export interface Game {
+  id: number;
+  slug: string;
+  name: string;
+  released: string;
+  tba: boolean;
+  background_image: string;
+  rating: number;
+  rating_top: number;
+  ratings: Rating[];
+  ratings_count: number;
+  reviews_text_count: number;
+  added: number;
+  added_by_status: AddedByStatus;
+  metacritic: number;
+  playtime: number;
+  suggestions_count: number;
+  updated: string;
+  user_game: null;
+  reviews_count: number;
+  saturated_color: string;
+  dominant_color: string;
+  platforms: Platform[];
+  parent_platforms: ParentPlatform[];
+  genres: Genre[];
+  stores: Store[];
+  clip: null;
+  tags: Tag[];
+  esrb_rating: EsrbRating;
+  short_screenshots: ShortScreenshot[];
+}
+
+interface Rating {
+  id: number;
+  title: string;
+  count: number;
+  percent: number;
+}
+
+interface AddedByStatus {
+  yet: number;
+  owned: number;
+  beaten: number;
+  toplay: number;
+  dropped: number;
+  playing: number;
+}
+
+interface Platform {
+  platform: {
+    id: number;
+    name: string;
+    slug: string;
+    image: null;
+    year_end: null;
+    year_start: number;
+    games_count: number;
+    image_background: string;
+  };
+  released_at: string;
+  requirements_en: null;
+  requirements_ru: null;
+}
+
+interface ParentPlatform {
+  platform: {
+    id: number;
+    name: string;
+    slug: string;
+  };
+}
+
+export interface Genre {
+  id: number;
+  name: string;
+  slug: string;
+  games_count: number;
+  image_background: string;
+}
+
+interface Store {
+  id: number;
+  store: {
+    id: number;
+    name: string;
+    slug: string;
+    domain: string;
+    games_count: number;
+    image_background: string;
+  };
+}
+
+ export interface Tag {
+  id: number;
+  name: string;
+  slug: string;
+  language: string;
+  games_count: number;
+  image_background: string;
+}
+
+interface EsrbRating {
+  id: number;
+  name: string;
+  slug: string;
+}
+
+interface ShortScreenshot {
+  id: number;
+  image: string;
+}

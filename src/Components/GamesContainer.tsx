@@ -4,6 +4,7 @@ import { CardContainer } from '../styledComponents/CardContainer'
 
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 import { fetchData } from '../Hooks/renderAsFetch'
+import { Game } from './gameSample'
 
 
 
@@ -20,7 +21,7 @@ function GamesContainer() {
       <>{console.log(gamesArr)}</>
       
       <div id='home'></div>
-      {<>{gamesArr?.results?.map((result:any) => {return <GameCard key={result.id} name={result.name} id={result.id} background_image={result.background_image} rating={result.rating} />})}</>}
+      {<>{gamesArr?.results?.map((result:Game) => {return <GameCard Game={result}/>})}</>}
       
     
     
