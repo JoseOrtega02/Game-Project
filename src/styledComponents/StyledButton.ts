@@ -10,6 +10,7 @@ font-size: 18px;
 position: fixed;
 top: 10px;
 right: 10px;
+z-index: 99999;
 &:hover {
     cursor: pointer;
 }

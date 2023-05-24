@@ -13,7 +13,6 @@ function Trailers(props:{trailers:any}) {
     const data = props.trailers.read()
   return (
     <>
-        {console.log(data)}
         <h3>Trailers:</h3>
             
             <Swiper spaceBetween={10}
@@ -23,8 +22,10 @@ function Trailers(props:{trailers:any}) {
       
     slidesPerView={1}>
                 {data?.results.map((res:any)=>(
-                
+                  
                     <SwiperSlide>
+                        
+                        <h5>{res.name}</h5>
                         <video src={res.data?.max} title={res.name} style={{width:"100%"}} poster={res.preview} controls></video>
                     </SwiperSlide>
                 ))}

@@ -10,7 +10,7 @@ export const GenreDiv = styled.div`
     overflow-x: scroll;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
     @media screen and (min-width: 768px) {
         justify-content: center;
@@ -22,9 +22,10 @@ export const GenreDiv = styled.div`
         border-radius: 5px;
         text-align: center;
         display: flex;
-    align-items: center;
+        align-items: center;
+        color: ${colors.button1};
         a{
-            color: ${colors.button1};
+           
             text-decoration: none;
         }
     }
