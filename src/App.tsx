@@ -12,6 +12,7 @@ import Publishers from './Pages/Publishers'
 import Stores from './Pages/Stores'
 import Developers from './Pages/Developers'
 import Home from './Pages/Home'
+import TagsPage from './Pages/TagsPage'
 function App() {
   
 
@@ -24,7 +25,8 @@ function App() {
         
       <Route  path='/' element={<Home/>}/>
         <Route  path='games/:gameId' element={<GameDetail/>}/>
-        <Route  path='genre/:genreId' element={<GenresPage/>}/>
+        <Route  path='genre/:genreId/:genreName' element={<GenresPage/>}/>
+        <Route  path='tags/:tagsId/:tagName' element={<TagsPage/>}/>
         <Route  path='/creators' element={<Creators/>}/>
         <Route  path='/platforms' element={<Platforms/>}/>
         <Route  path='/publishers' element={<Publishers/>}/>

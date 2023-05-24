@@ -21,7 +21,7 @@ function GamesContainer() {
       <>{console.log(gamesArr)}</>
       
       <div id='home'></div>
-      {<>{gamesArr?.results?.map((result:Game) => {return <GameCard Game={result}/>})}</>}
+      {<>{gamesArr?.results?.map((result:Game) => {return <GameCard Game={result} key={result.id}/>})}</>}
       
     
     

@@ -8,12 +8,14 @@ import { Link } from 'react-router-dom'
 function Genres() {
  
   const data = genres.read()
+  
   return (<Suspense fallback={<h4>Loading...</h4>}>
+    <h3 style={{marginTop:"30px"}}>Genres:</h3>
     <GenreDiv>
       
-     
+        
         {data?.results.map((res:any) => (
-         <Link to={`genre/${res.id}`} state={res} style={{textDecoration:"none"}}><h4 key={res.id}>{res.name}</h4></Link>
+         <Link to={`genre/${res.id}/${res.name}`} state={res} style={{textDecoration:"none"}}><h4 key={res.id}>{res.name}</h4></Link>
         ))}
        
     </GenreDiv>
