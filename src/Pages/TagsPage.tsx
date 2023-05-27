@@ -1,20 +1,21 @@
-import React, { Suspense, useEffect, useState, useTransition } from 'react'
+
 import { useLocation } from 'react-router-dom'
-import { fetchData } from '../Hooks/renderAsFetch'
+
 import GameCard from '../Components/GameCard'
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 import { CardContainer } from '../styledComponents/CardContainer'
 import useFetch from '../Hooks/useFetch'
-import { Game } from '../Components/gameSample'
+import { baseUrl } from '../Routes/Routes'
+
 
   
 
  
-  
+const key = import.meta.env.VITE_REACT_APP_API_KEY
 function TagsPage() {
   const id = window.location.pathname.split("/")[2]
   const name = window.location.pathname.split("/")[3]
-  const { data, loading, error, Refetch } = useFetch({url:`https://api.rawg.io/api/games?tags=${id}&key=c54aa861de274d579731eebf68f91d4b`});
+  const { data, loading, error, Refetch } = useFetch({url:`${baseUrl}/games?tags=${id}&key=${key}`});
   
   const location = useLocation()
   return (

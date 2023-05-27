@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { StyledGameCard } from '../styledComponents/StyledGameCard'
 import { Link } from 'react-router-dom'
 import { Game } from './gameSample'

@@ -1,20 +1,20 @@
 
-import { useLocation } from 'react-router-dom'
 
 import GameCard from '../Components/GameCard'
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 import { CardContainer } from '../styledComponents/CardContainer'
 import useFetch from '../Hooks/useFetch'
+import { baseUrl } from '../Routes/Routes'
 
 
   
 
- 
+const key = import.meta.env.VITE_REACT_APP_API_KEY
   
 function GenresPage() {
   const id = window.location.pathname.split("/")[2]
   const name = window.location.pathname.split("/")[3]
-  const { data, loading, error, Refetch } = useFetch({url:`https://api.rawg.io/api/games?genres=${id}&key=c54aa861de274d579731eebf68f91d4b`});
+  const { data, loading, error, Refetch } = useFetch({url:`${baseUrl}/games?genres=${id}&key=${key}`});
   
  
   

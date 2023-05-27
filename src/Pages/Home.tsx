@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Genres from '../Components/Genres'
 import GamesContainer from '../Components/GamesContainer'
 import Tags from '../Components/Tags'

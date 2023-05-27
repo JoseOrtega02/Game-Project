@@ -3,8 +3,9 @@ import { GenreDiv } from '../styledComponents/StyledGenre'
 import { fetchData } from '../Hooks/renderAsFetch'
 import { Link } from 'react-router-dom'
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
-
-const tags = fetchData("https://api.rawg.io/api/tags?key=c54aa861de274d579731eebf68f91d4b")
+import { tagsUrl } from '../Routes/Routes'
+const key = import.meta.env.VITE_REACT_APP_API_KEY
+const tags = fetchData(`${tagsUrl}?key=${key}`)
 function Tags() {
     
     
