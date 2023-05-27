@@ -1,12 +1,12 @@
-import React, { Suspense, useState } from 'react'
-import { Genre, Tag, game } from '../Components/gameSample'
+import  { Suspense,  } from 'react'
+import { Genre, Tag, } from '../Components/gameSample'
 import { ButtonGeneric } from '../styledComponents/PageStyled'
 import { GameDetails } from '../styledComponents/GameDetail'
-import { Button } from '../styledComponents/StyledButton'
+
 import Screenshots from '../Components/Screenshots'
 import { fetchData } from '../Hooks/renderAsFetch'
 import Trailers from '../Components/Trailers'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 
@@ -14,10 +14,9 @@ function GameDetail() {
   
   const location = useLocation()
   const Game = location.state
-  console.log(Game)
   const screenshots = fetchData(`https://api.rawg.io/api/games/${Game.id}/screenshots?key=c54aa861de274d579731eebf68f91d4b`)
   const trailers = fetchData(`https://api.rawg.io/api/games/${Game.id}/movies?key=c54aa861de274d579731eebf68f91d4b`)
- 
+  const tags = Game.tags.filter((tag:Tag) => tag.language === 'eng')
   
     
   return (
@@ -48,11 +47,12 @@ function GameDetail() {
     </div>
     <h3>Genres:</h3>
     <div className="map__container">
-      {Game.genres.map((genres:Genre) =><h4>{genres.name}</h4> )}
+      {Game.genres.map((genres:Genre) =><Link to={`/genre/${genres.id}/${genres.name}`} relative={`/genre/${genres.id}/${genres.name}`} state={genres} style={{textDecoration:"none"}}><h4 key={genres.id}>{genres.name}</h4></Link> )}
     </div>
     <h3>Tags:</h3>
     <div className="map__container">
-      {Game.tags.map((tag:Tag) =><h4>{tag.name}</h4> )}
+      
+      {tags.map((tag:Tag) =><Link to={`/tags/${tag.id}/${tag.name}`} relative={`/tags/${tag.id}/${tag.name}`} state={tag} style={{textDecoration:"none"}}><h4 key={tag.id}>{tag.name}</h4></Link> )}
     </div>
     </GameDetails>
   )

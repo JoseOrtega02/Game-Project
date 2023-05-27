@@ -13,11 +13,11 @@ function Tags() {
     const [isPending,startTransition] = useTransition()
     return (<Suspense fallback={<h4>Loading...</h4>}>
       <h3 style={{marginTop:"30px"}}>Tags:</h3>
-      <GenreDiv>
+      <GenreDiv style={{opacity: isPending ? "0.5":"1"}}> 
         
           
           {data?.results.map((res:any) => (
-           <Link to={`tags/${res.id}/${res.name}`} state={res} style={{textDecoration:"none"}}><h4 key={res.id}>{res.name}</h4><>{console.log(res)}</></Link>
+           <Link to={`tags/${res.id}/${res.name}`} state={res} style={{textDecoration:"none"}} key={res.id}><h4 >{res.name}</h4></Link>
           ))}
          
       </GenreDiv>

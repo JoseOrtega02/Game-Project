@@ -18,14 +18,10 @@ function GamesContainer() {
   return (<>
     <Suspense fallback={<h4>loading...</h4>}>
     <CardContainer style={{opacity: isPending? 0.5:1 }}>
-      <>{console.log(gamesArr)}</>
+      
       
       <div id='home'></div>
       {<>{gamesArr?.results?.map((result:Game) => {return <GameCard Game={result} key={result.id}/>})}</>}
-      
-    
-    
-
     </CardContainer>
     <PageStyled>
       

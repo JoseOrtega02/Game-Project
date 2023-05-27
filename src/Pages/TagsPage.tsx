@@ -25,7 +25,7 @@ function TagsPage() {
           <CardContainer id='home'>
           {error && <h4>an Error ocurred</h4>}
             {loading && <h4>Loading...</h4>}
-          {data?.results?.map((result:any) => (<GameCard Game={result} />))}
+          {data?.results?.map((result:any) => (<GameCard Game={result} key={result.id} />))}
        </CardContainer>
         
       
