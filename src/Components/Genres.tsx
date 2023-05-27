@@ -1,10 +1,11 @@
-import React, { Suspense } from 'react'
+import  { Suspense } from 'react'
 import { GenreDiv } from '../styledComponents/StyledGenre'
 import { fetchData } from '../Hooks/renderAsFetch'
 import { Link } from 'react-router-dom'
+import { genresUrl } from '../Routes/Routes'
 
-
- const genres = fetchData("https://api.rawg.io/api/genres?key=c54aa861de274d579731eebf68f91d4b")
+ const key = import.meta.env.VITE_REACT_APP_API_KEY
+ const genres = fetchData(`${genresUrl}?key=${key}`)
 function Genres() {
  
   const data = genres.read()

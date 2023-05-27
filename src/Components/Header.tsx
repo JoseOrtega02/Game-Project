@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { SideBar } from '../styledComponents/StyledSideBar'
 import { HeaderDiv } from '../styledComponents/StyledHeader'
 import { Button } from '../styledComponents/StyledButton'

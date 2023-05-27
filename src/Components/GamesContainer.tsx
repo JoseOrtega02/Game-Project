@@ -5,10 +5,11 @@ import { CardContainer } from '../styledComponents/CardContainer'
 import { ButtonGeneric, PageStyled } from '../styledComponents/PageStyled'
 import { fetchData } from '../Hooks/renderAsFetch'
 import { Game } from './gameSample'
+import { baseUrl } from '../Routes/Routes'
 
 
-
-const games = fetchData("https://api.rawg.io/api/games?key=c54aa861de274d579731eebf68f91d4b")
+const key = import.meta.env.VITE_REACT_APP_API_KEY
+const games = fetchData(`${baseUrl}/games?key=${key}`)
 function GamesContainer() {
 
  

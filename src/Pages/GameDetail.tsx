@@ -7,15 +7,16 @@ import Screenshots from '../Components/Screenshots'
 import { fetchData } from '../Hooks/renderAsFetch'
 import Trailers from '../Components/Trailers'
 import { Link, useLocation } from 'react-router-dom'
+import { baseUrl } from '../Routes/Routes'
 
-
+const key = import.meta.env.VITE_REACT_APP_API_KEY
 
 function GameDetail() {
   
   const location = useLocation()
   const Game = location.state
-  const screenshots = fetchData(`https://api.rawg.io/api/games/${Game.id}/screenshots?key=c54aa861de274d579731eebf68f91d4b`)
-  const trailers = fetchData(`https://api.rawg.io/api/games/${Game.id}/movies?key=c54aa861de274d579731eebf68f91d4b`)
+  const screenshots = fetchData(`${baseUrl}/games/${Game.id}/screenshots?key=${key}`)
+  const trailers = fetchData(`${baseUrl}/games/${Game.id}/movies?key=${key}`)
   const tags = Game.tags.filter((tag:Tag) => tag.language === 'eng')
   
     
