@@ -34,6 +34,7 @@ function GameDetail() {
     <div className="text__container">
       <h3>Released at <h3 id='colored__text'>{Game.released}</h3></h3>
       <h3>Playtime: <h3 id='colored__text'>{Game.playtime}</h3>hrs</h3>
+      <h3>Metacritic: <h3 id="colored__text">{Game.metacritic} </h3>  </h3>
     </div>
     <Suspense fallback={<h4>Loading..</h4>}>
         <Screenshots screenshots={screenshots} />
@@ -42,10 +43,7 @@ function GameDetail() {
         <Suspense fallback={<h4>Loading..</h4>}>
           <Trailers trailers={trailers} />
         </Suspense>
-    <div className="button__container">
-      <ButtonGeneric>Metacritic: {Game.metacritic} +</ButtonGeneric>
-      <ButtonGeneric>Reddit +</ButtonGeneric>
-    </div>
+    
     <h3>Genres:</h3>
     <div className="map__container">
       {Game.genres.map((genres:Genre) =><Link to={`/genre/${genres.id}/${genres.name}`} relative={`/genre/${genres.id}/${genres.name}`} state={genres} style={{textDecoration:"none"}}><h4 key={genres.id}>{genres.name}</h4></Link> )}
