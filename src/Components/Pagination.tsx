@@ -1,8 +1,14 @@
 import { ButtonGeneric, PageStyled } from "../styledComponents/PageStyled";
 import { Game } from "./gameSample";
 
+
+
 interface Props  {
-    gamesArr:Game[],
+    gamesArr: {
+      previous: string
+      next: string
+      results:Game[]
+    },
     startTransition:Function,
     setGames: Function,
     fetchData:Function,
