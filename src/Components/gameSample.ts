@@ -236,6 +236,8 @@ export const game = {
 // Interface typescript of game
 export interface Game {
   id: number;
+  previous: string | null;
+  next: string;
   slug: string;
   name: string;
   released: string;

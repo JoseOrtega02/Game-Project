@@ -13,6 +13,7 @@ import Stores from './Pages/Stores'
 import Developers from './Pages/Developers'
 import Home from './Pages/Home'
 import TagsPage from './Pages/TagsPage'
+import SearchPage from './Pages/SearchPage'
 function App() {
   
 
@@ -27,6 +28,7 @@ function App() {
         <Route  path='games/:gameId' element={<GameDetail/>}/>
         <Route  path='genre/:genreId/:genreName' element={<GenresPage/>}/>
         <Route  path='tags/:tagsId/:tagName' element={<TagsPage/>}/>
+        <Route path='/search' element={<SearchPage/>}/>
         <Route  path='/creators' element={<Creators/>}/>
         <Route  path='/platforms' element={<Platforms/>}/>
         <Route  path='/publishers' element={<Publishers/>}/>
