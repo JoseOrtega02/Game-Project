@@ -1,3 +1,4 @@
+import { Pagination } from './Pagination';
 import  { Suspense, useState, useTransition } from 'react'
 import GameCard from './GameCard'
 import { CardContainer } from '../styledComponents/CardContainer'
@@ -24,25 +25,12 @@ function GamesContainer() {
       <div id='home'></div>
       {<>{gamesArr?.results?.map((result:Game) => {return <GameCard Game={result} key={result.id}/>})}</>}
     </CardContainer>
-    <PageStyled>
-      
-    <a href="#home"><ButtonGeneric onClick={()=>{
-      if(gamesArr?.previous !== null){
-        startTransition(()=>
-      setGames(fetchData(gamesArr?.previous))
-      )
-      }
-      
-    }}>prev</ButtonGeneric></a>
-    <a href="#home"><ButtonGeneric onClick={()=>{
-      startTransition(()=>
-      setGames(fetchData(gamesArr?.next))
-      )
-    }}>next</ButtonGeneric></a>
-    </PageStyled>
+   <Pagination   gamesArr={gamesArr}  startTransition={startTransition} setGames={setGames} fetchData={fetchData}   />
     </Suspense>
     </>
   )
 }
 
-export default GamesContainer
+
+   
+  export default GamesContainer
